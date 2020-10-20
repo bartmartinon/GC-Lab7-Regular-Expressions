@@ -1,0 +1,7 @@
+Two exceptions that I found myself dealing with constantly are:
+
+1. FormatException
+Considering how input-heavy the last few assignments have been, this one constantly pops up when trying to see what breaks the program. FormatException pops up when an input string is attempted to be parsed into a int while having non-numerical values like letters, symbols, or whitespaces that are missed. The program will outright stop as it's trying to use the incorrectly formatted string input as an argument for another method and then display the exception message.
+
+2. IndexOutOfRangeException
+Mainly from the Pig Latin Capstone, I hadn't taken into account the fact that Split() will also create empty strings from stacked whitespaces in between words in a sentence string. And considering that I needed to rely on the first character of each word string to determine if it's capitalized, this one suddenly reared its ugly head. IndexOutOfRangeExceptions pop up whenever an attempt is made to read an indexed value of an array that is outside said array's bounds. As soon as one of those empty word strings were shown to find the first character, (index 0) it realizes that it's looking for a value in an index that doesn't exist in that empty string with zero characters. As expected, once the exception pops up, (unless it's been handled) the program will terminate and display the exception message.
