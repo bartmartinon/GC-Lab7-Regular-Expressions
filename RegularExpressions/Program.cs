@@ -70,7 +70,7 @@ namespace RegularExpressions
         // Takes a string and returns a boolean based on whether the input matches the format for Names
         public static bool ValidateName(string name)
         {
-            if (Regex.IsMatch(name, @"^[A-Z][a-z]{1,30}$"))
+            if (Regex.IsMatch(name, @"^[A-Z][a-z]{1,29}$"))
             {
                 Console.WriteLine("Name confirmed!");
                 return true;
